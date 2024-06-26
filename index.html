@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculatrice</title>
+  <link rel="stylesheet" href="css/general.css">
+  <script src="js/index.js"></script>
+</head>
+<body>
+  <header>
+    <titre>
+      <h1>Calculatrice en ligne</h1>
+    </titre>
+  </header>
+  <main>
+    <section class="calculatrice">
+      <section class="colonne">
+        <button class="touche" onclick="calculatrice(0)">0</button>
+        <button class="touche" onclick="calculatrice(7)">7</button>
+        <button class="touche" onclick="calculatrice(4)">4</button>
+        <button class="touche" onclick="calculatrice(1)">1</button>
+        <button class="touche" onclick="calculatrice('~')">√</button>
+      </section>
+      <section class="colonne">
+        <button class="touche" onclick="calculatrice('/')">/</button>
+        <button class="touche" onclick="calculatrice(8)">8</button>
+        <button class="touche" onclick="calculatrice(5)">5</button>
+        <button class="touche" onclick="calculatrice(2)">2</button>
+        <button class="touche" onclick="calculatrice('par1')">(</button>
+      </section>
+      <section class="colonne">
+        <button class="touche" onclick="calculatrice('*')">*</button>
+        <button class="touche" onclick="calculatrice(9)">9</button>
+        <button class="touche" onclick="calculatrice(6)">6</button>
+        <button class="touche" onclick="calculatrice(3)">3</button>
+        <button class="touche" onclick="calculatrice('par2')">)</button>
+      </section>
+      <section class="colonne">
+        <button class="touche" onclick="calculatrice('.')">,</button>
+        <button class="touche" onclick="calculatrice('-')">-</button>
+        <button class="touche" onclick="calculatrice('+')">+</button>
+        <button class="touche" onclick="entrer()">⏎</button>
+        <button class="touche" onclick="supprimer()">Del</button>
+      </section>
+    </section>
+    <section class="case">
+      <p class="reponse"></p>
+    </section>
+  </main>
+  <footer>
+    <div class="byme">
+      <p class="cémoi">Made by kavv3t.</p>
+    </div>
+  </footer>
+</body>
+</html>
