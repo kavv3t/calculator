@@ -21,23 +21,16 @@ function calculatrice(number) {
     total = `${total}(`;
   } else if (num == 'par2') {
     total = `${total})`;
+  } else if (num == 'bp') {
+    total = '';
+  } else if (num == 'entrer') {
+    total = eval(total);
+    total = (Math.round(total * 1000)) / 1000;
   } else {
     total += num;
   }
 
   console.log(total);
-  document.querySelector('.reponse').innerHTML = total;
-}
-
-function entrer() {
-  total = eval(total);
-  total = (Math.round(total * 1000)) / 1000;
-  console.log(total);
-  document.querySelector('.reponse').innerHTML = total;
-}
-
-function supprimer() {
-  total = '';
   document.querySelector('.reponse').innerHTML = total;
 }
 
