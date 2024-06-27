@@ -4,6 +4,7 @@
 body {
   display: grid;
   background-color: rgb(31, 31, 31);
+  justify-content: center;
   color: white;
   font-family: 'Times New Roman', Times, serif;
   font-family: "Space Grotesk", sans-serif;
