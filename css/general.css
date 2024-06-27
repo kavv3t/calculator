@@ -9,8 +9,9 @@ body {
   height: auto;
   font-family: 'Times New Roman', Times, serif;
   font-family: "Space Grotesk", sans-serif;
-  grid-template-rows: 150px auto 100px;
+  grid-template-rows: 100px auto 50px;
   align-items: center;
+  height: 800px;
 }
 
 header {
@@ -28,7 +29,7 @@ h1 {
 }
 
 main {
-  height: 700px;
+  height: 750px;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -74,9 +75,10 @@ footer {
   cursor: pointer;
 }
 
-.delete {
+.enter {
   background-color: white;
   color: black;
+  font-size: 35px;
 }
 
 .touche:hover {
@@ -100,14 +102,14 @@ footer {
   align-items: center;
   border-radius: 10px;
   padding: 0px 8px;
-  height: 70px;
-  font-size: 20px;
+  height: 80px;
+  font-size: 25px;
 }
 
 .reponse::before {
   content: 'Calcul : ';
   font-weight: 500;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .byme {
@@ -123,7 +125,19 @@ footer {
   font-size: 20px;
 }
 
-@media only screen and (max-width: 1000px) {
+@media (max-width: 1500px) {
+  body {
+    scale: 0.9;
+  }
+}
+
+@media (max-width: 1375px) {
+  body {
+    scale: 0.8;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
   body {
     scale: 0.7;
     height: 800px;
@@ -135,7 +149,7 @@ footer {
     transition: 0.1s;
   }
 
-  .delete:hover {
+  .enter:hover {
     background-color: white;
     color: black;
     transition: 0.1s;
