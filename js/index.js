@@ -8,6 +8,8 @@ function calculatrice(number) {
 
   if (total === prefait) {
     total = '';
+  } else if (total === 'Infinity') {
+    total = '';
   }
 
   if (num == '+') {
@@ -47,6 +49,8 @@ window.addEventListener("keydown", (event) => {
   total = String(total);
 
   if (total === prefait) {
+    total = '';
+  } else if (total === 'Infinity') {
     total = '';
   }
 
