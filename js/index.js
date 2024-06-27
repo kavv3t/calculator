@@ -1,9 +1,14 @@
 let total = '';
+let prefait = 'Il n\'y a rien à calculer.'
 
 function calculatrice(number) {
   let num = number;
 
   total = String(total);
+
+  if (total === prefait) {
+    total = '';
+  }
 
   if (num == '+') {
     total = `${total} + `;
@@ -24,8 +29,12 @@ function calculatrice(number) {
   } else if (num == 'bp') {
     total = '';
   } else if (num == 'entrer') {
-    total = eval(total);
-    total = (Math.round(total * 1000)) / 1000;
+    if (total) {
+      total = eval(total);
+      total = (Math.round(total * 1000)) / 1000;
+    } else {
+      total = prefait;
+    }
   } else {
     total += num;
   }
@@ -36,6 +45,10 @@ function calculatrice(number) {
 
 window.addEventListener("keydown", (event) => {
   total = String(total);
+
+  if (total === prefait) {
+    total = '';
+  }
 
   if (event.key == '+') {
     total = `${total} + `;
@@ -54,12 +67,16 @@ window.addEventListener("keydown", (event) => {
   } else if (event.key <= 9 && event.key >= 0) {
     total += event.key;
   } else if (event.key == 'Enter') {
-    total = eval(total);
-    total = (Math.round(total * 1000)) / 1000;
+    if (total) {
+      total = eval(total);
+      total = (Math.round(total * 1000)) / 1000;
+    } else {
+      total = prefait;
+    }
   } else if (event.key = 'Backspace') {
     total = '';
   }
-
+  
   console.log(total);
   document.querySelector('.reponse').innerHTML = total;
 })
