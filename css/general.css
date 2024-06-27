@@ -6,6 +6,7 @@ body {
   background-color: rgb(31, 31, 31);
   justify-content: center;
   color: white;
+  height: auto;
   font-family: 'Times New Roman', Times, serif;
   font-family: "Space Grotesk", sans-serif;
   grid-template-rows: 150px auto 100px;
@@ -130,6 +131,12 @@ footer {
   .touche:hover {
     background-color: rgb(21, 21, 21);
     color: white;
+    transition: 0.1s;
+  }
+
+  .delete:hover {
+    background-color: white;
+    color: black;
     transition: 0.1s;
   }
 }
