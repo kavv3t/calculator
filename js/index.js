@@ -30,6 +30,14 @@ function calculatrice(number) {
     total = `${total})`;
   } else if (num == 'bp') {
     total = '';
+  } else if (num == 'x2') {
+    total = `${total} ** 2`;
+  } else if (num == 'xpo') {
+    total = `${total} ** `;
+  } else if (num == 'log') {
+    total = `${total}Math.log10(`;
+  } else if (num == 'ln') {
+    total = `${total}Math.log(`;
   } else if (num == 'entrer') {
     if (total) {
       total = eval(total);
